@@ -29,4 +29,3 @@ const loveBankById = async (_, { _id, kidId }, context) => {
   }
 };
 module.exports = { loveBanks, loveBankById };
-
