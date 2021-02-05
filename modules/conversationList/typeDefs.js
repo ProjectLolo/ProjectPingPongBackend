@@ -9,7 +9,7 @@ const typeDefs = gql`
   extend type Mutation {
     createConversationList(
       pongId: String!
-      userId: String!
+      recipientId: String!
       url: String!
     ): ConversationList!
   }
@@ -17,7 +17,8 @@ const typeDefs = gql`
   type ConversationList {
     _id: ID
     pongId: MonkeyPong
-    userId: ID
+    senderId: ID
+    recipientId: ID
     url: String
   }
 `;

@@ -3,7 +3,11 @@ const MonkeyPong = require("../../../models/MonkeyPong");
 const checkAuth = require("../../../utils/check-auth");
 const ConversationList = require("../../../models/ConversationList");
 
-const createConversationList = async (_, { userId, url, pongId }, context) => {
+const createConversationList = async (
+  _,
+  { recipientId, url, pongId },
+  context
+) => {
   const user = checkAuth(context);
 
   try {
@@ -12,7 +16,8 @@ const createConversationList = async (_, { userId, url, pongId }, context) => {
     const conversationList = new ConversationList({
       pongId,
       url,
-      userId: user.userId,
+      senderId: user.userId,
+      recipientId,
     });
     console.log(conversationList);
 
