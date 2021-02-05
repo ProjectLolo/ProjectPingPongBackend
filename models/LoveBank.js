@@ -17,7 +17,7 @@ const loveBankSchema = new Schema(
 
     category: {
       type: String,
-      enum: ["fun", "memory", "activate", "teach", "sing", "read", "share"],
+      enum: ["fun", "memory", "activate", "teach", "sing", "read", "share", "ping-pong"],
       default: "",
     },
     type: {

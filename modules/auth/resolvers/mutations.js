@@ -30,7 +30,6 @@ const login = async (_, { email, password }) => {
 
 const signup = async (
   _,
-
   { firstName, lastName, password, email, profilePic }
 ) => {
   try {

@@ -39,6 +39,7 @@ const createComment = async (_, { comment, loveBankId }, context) => {
       },
     });
   }
+  
 
   const loveBank = await LoveBank.findById(loveBankId);
 
