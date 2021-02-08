@@ -19,4 +19,5 @@ const findConversationList = async (_, { userId }, context) => {
   }
 };
 
+
 module.exports = { findConversationList };
