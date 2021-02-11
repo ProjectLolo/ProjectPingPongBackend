@@ -1,5 +1,7 @@
 const mutations = require("./mutations");
 const queries = require("./queries");
+const subscriptions = require("./subscriptions");
+
 
 const resolvers = {
   Query: {
@@ -7,6 +9,9 @@ const resolvers = {
   },
   Mutation: {
     ...mutations,
+  },
+  Subscription: {
+    ...subscriptions,
   },
 };
 

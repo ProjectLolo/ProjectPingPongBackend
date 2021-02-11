@@ -7,7 +7,7 @@ const MonkeyPongSchema = new Schema(
       type: String,
       required: true,
     },
-
+    
     kidId: {
       type: Schema.Types.ObjectId,
       ref: "Kid",
