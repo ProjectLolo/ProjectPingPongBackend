@@ -1,9 +1,9 @@
-const { gql } = require("apollo-server");
+const {gql} = require("apollo-server");
 const resolvers = require("./resolvers");
 
 const typeDefs = gql`
   extend type Query {
-    findConversationList(userId: ID!): [ConversationList]
+    findConversationList: [ConversationList]
   }
 
   extend type Mutation {

@@ -1,9 +1,9 @@
 const ConversationList = require("../../../models/ConversationList");
 const checkAuth = require("../../../utils/check-auth");
 
-const findConversationList = async (_, { userId }, context) => {
+const findConversationList = async (_, __, context) => {
   try {
-    const { userId } = checkAuth(context);
+    const {userId} = checkAuth(context);
 
     const conversationListSender = await ConversationList.find({
       senderId: userId,
@@ -19,5 +19,4 @@ const findConversationList = async (_, { userId }, context) => {
   }
 };
 
-
-module.exports = { findConversationList };
+module.exports = {findConversationList};
