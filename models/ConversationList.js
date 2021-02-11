@@ -13,10 +13,7 @@ const ConversationListSchema = new Schema(
     pongId: {
       type: Schema.Types.ObjectId,
       ref: "MonkeyPong",
-    },
-    url: {
-      type: String,
-    },
+    }
   },
   { timestamps: true }
 );

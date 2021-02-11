@@ -2,6 +2,11 @@ const { gql } = require("apollo-server");
 const resolvers = require("./resolvers");
 
 const typeDefs = gql`
+
+  extend type Subscription {
+    newConversation: String!
+  }
+
   extend type Query {
     monkeyPongs(kidId: ID): [MonkeyPong!]!
     findMonkeyPongs(kidId: ID): [MonkeyPong!]!
@@ -11,8 +16,9 @@ const typeDefs = gql`
   extend type Mutation {
     createMonkeyPong(
       animal: String!
-      kidId: ID
-      url: String!
+      kidId: ID,
+      url: String!,
+      recipientId: String 
       ): MonkeyPong!
   }
 
@@ -22,7 +28,9 @@ const typeDefs = gql`
     kidId: ID!
     url: String!
     userId: User!
+    list: ConversationList!
   }
+
 `;
 
 module.exports = {
