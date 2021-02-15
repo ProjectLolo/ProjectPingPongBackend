@@ -20,6 +20,7 @@ const typeDefs = gql`
     senderId: ID
     recipientId: ID
     url: String
+    createdAt: String
   }
 `;
 
